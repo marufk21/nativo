@@ -1,19 +1,13 @@
 import { Header } from "@/components/Header";
-import { useRouter } from "expo-router";
 import React, { useState } from "react";
 import { ScrollView, Switch, Text, View } from "react-native";
 
 export default function SettingsScreen() {
-  const router = useRouter();
   const [darkMode, setDarkMode] = useState(false);
 
   return (
     <View className="flex-1 bg-gray-50 dark:bg-gray-900">
-      <Header
-        title="Settings"
-        showBackButton
-        onBackPress={() => router.back()}
-      />
+      <Header title="Settings" />
 
       <ScrollView className="flex-1 p-4">
         <View className="bg-white dark:bg-gray-800 rounded-xl p-4 mb-6">

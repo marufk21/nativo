@@ -3,15 +3,37 @@ import "../globals.css";
 
 export default function RootLayout() {
   return (
-    <Stack screenOptions={{ headerShown: false }}>
+    <Stack 
+      screenOptions={{ 
+        headerShown: false,
+        animation: "slide_from_right",
+        animationDuration: 300
+      }}
+    >
       <Stack.Screen name="index" />
       <Stack.Screen name="auth/login" />
       <Stack.Screen name="auth/signup" />
-      <Stack.Screen name="dashboard/index" />
-      <Stack.Screen name="dashboard/add" />
-      <Stack.Screen name="dashboard/[id]" />
-      <Stack.Screen name="profile/index" />
-      <Stack.Screen name="settings/index" />
+      <Stack.Screen 
+        name="(tabs)" 
+        options={{ 
+          headerShown: false,
+          animation: "slide_from_bottom"
+        }} 
+      />
+      <Stack.Screen 
+        name="dashboard/add" 
+        options={{
+          animation: "slide_from_right",
+          animationDuration: 300
+        }}
+      />
+      <Stack.Screen 
+        name="dashboard/[id]" 
+        options={{
+          animation: "slide_from_right",
+          animationDuration: 300
+        }}
+      />
     </Stack>
   );
 }

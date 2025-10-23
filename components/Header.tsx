@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
   onRightIconPress,
 }) => {
   return (
-    <View className="flex-row items-center justify-between p-4 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+    <View className="flex-row items-center justify-between pb-4 pt-12 ml-5 bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800">
       <View className="flex-row items-center">
         {showBackButton && (
           <TouchableOpacity onPress={onBackPress} className="mr-3">
