@@ -5,5 +5,16 @@ module.exports = function (api) {
       ["babel-preset-expo", { jsxImportSource: "nativewind" }],
       "nativewind/babel",
     ],
+    plugins: [
+      // Fix for tslib issue
+      [
+        "module-resolver",
+        {
+          alias: {
+            tslib: "tslib/tslib.es6.js",
+          },
+        },
+      ],
+    ],
   };
 };
